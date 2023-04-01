@@ -27,11 +27,11 @@ const HomePage = () => {
 
   return (
     <>
-      <div className=" bg-white flex justify-between shadow-md space-x-32 py-4 col-span-2 rounded">
+      <div className="bg-white flex justify-between px-3 py-4  rounded space-x-10 items-center shadow-sm h-[3rem] w-[900px] ">
         {homeItem.map((item) => (
           <>
             <div className="px-2" key={item.id}>
-              <div className="flex space-x-3 items-center text-black">
+              <div className="flex space-x-3 items-center flex-row text-black">
                 <span className=" mr-2 bg-appcolor-600 rounded-full text-sm font-bold">
                   {item.icon}
                 </span>

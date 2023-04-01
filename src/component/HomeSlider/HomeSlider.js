@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import banner from "../asset/banner.jpg";
 import banner2 from "../asset/banner2.jpg";
+
 const HomeSlider = () => {
   let settings = {
     autoplay: true,
@@ -17,12 +18,12 @@ const HomeSlider = () => {
   };
 
   return (
-    <div className="w-[900px] h-[430px] mt-5 overflow-y-hidden">
+    <div className="w-[900px]  h-[435px] rounded-md mt-5 overflow-y-hidden">
       <div className="container">
-        <div className=" overflow-hidden">
+        <div className="overflow-hidden">
           <Slider {...settings}>
             <div className="">
-              <img src={banner} alt="" />
+              <img src={banner} alt="banners" />
             </div>
             <div className="">
               <img src={banner2} alt="" />

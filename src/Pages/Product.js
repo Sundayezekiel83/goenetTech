@@ -1,13 +1,15 @@
 import React from "react";
-import laptop from "../component/asset/laptop.jpg";
+import { useNavigate } from "react-router-dom";
 import "../Pages/product.scss";
-import { Navigate } from "react-router-dom";
+
 const Product = ({ products }) => {
+  const Navigate = useNavigate();
+
   return (
     <>
       <div
-        className="product-item bg-white"
-        // onClick={Navigate(`/products/details`, { products })}
+        className="product-item"
+        onClick={() => Navigate(`/products/detail`, { state: { products } })}
       >
         <div className="category">{products.category}</div>
         <div className="product-item-img">

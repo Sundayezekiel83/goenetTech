@@ -74,7 +74,7 @@ const SideBar = () => {
 
   return (
     <>
-      <div className="bg-white shadow-md rounded-md min-w-[250px] h-[435px] mt-10 overflow-auto">
+      <div className="bg-white shadow-md rounded-md min-w-[250px] h-[435px] overflow-auto">
         <div className="flex flex-col gap-4 p-3 ">
           <span
             className="inline-flex text-sm bg-white

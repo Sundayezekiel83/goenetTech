@@ -10,3 +10,8 @@ export async function FetchAllProducts() {
   const response = await api.get(`${ApiEndPoints.all_product}`);
   return response;
 }
+
+export async function DetailProducts(payload) {
+  const response = await api.get(`${ApiEndPoints.detail_product}/:${payload}`);
+  return response;
+}

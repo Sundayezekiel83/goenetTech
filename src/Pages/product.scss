@@ -4,12 +4,13 @@
   box-shadow: rgba(50, 50, 93, 0.05) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.05) 0px 1px 3px -1px;
   transition: ease-in-out;
+  max-width: 18rem;
 
   .category {
     position: absolute;
     left: -5px;
     top: 1.6rem;
-    background-color: red;
+    background-color: #ff6433;
     color: white;
     font-size: 13px;
     text-transform: capitalize;
@@ -33,7 +34,7 @@
   &-img {
     padding-bottom: 4px;
     margin-bottom: 12px;
-    height: 250px;
+    height: 200px;
     overflow: hidden !important;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;

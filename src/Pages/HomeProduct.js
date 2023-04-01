@@ -7,6 +7,9 @@ import { categorySliceAction } from "../store/slice/categorySlice";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import HomePage from "./HomePage";
+import HomeSlider from "../component/HomeSlider/HomeSlider";
+import SideBar from "../component/SideBar/SideBar";
 
 const HomeProduct = () => {
   let settings = {
@@ -63,6 +66,17 @@ const HomeProduct = () => {
 
   return (
     <>
+      <section className="grid grid-cols-4 gap-4 mt-4 px-8">
+        <div className="cols-span-1 w-16 ">
+          <SideBar />
+        </div>
+
+        <div className="cols-span-3 ">
+          <HomePage />
+          <HomeSlider />
+        </div>
+      </section>
+
       <div className="text-center flex justify-center mb-8 text-lg font-bold text-appcolor-500">
         <AnimatedText
           type="char" // animate words or chars
@@ -84,7 +98,7 @@ const HomeProduct = () => {
           FEATURED PRODUCTS
         </AnimatedText>
       </div>
-      <div className="grid grid-cols-4 gap-4 px-6">
+      <div className="grid grid-cols-4 gap-4 px-6 justify-center items-center left-[50%]">
         {tempProducts.map((product) => (
           <div key={product.id}>
             <Product products={product} />
@@ -146,7 +160,7 @@ const HomeProduct = () => {
         </AnimatedText>
       </div>
 
-      <div className="grid grid-cols-4 gap-4 px-6">
+      <div className="grid grid-cols-3 gap-4 px-6">
         {catProductsTwo?.map((product) => (
           <div key={product.id}>
             <Product products={product} />
@@ -175,7 +189,7 @@ const HomeProduct = () => {
           SmartPhones
         </AnimatedText>
       </div>
-      <div className="grid grid-cols-4 gap-4 px-6">
+      <div className="grid grid-cols-3 gap-4 px-6">
         {catProductsOne?.map((product) => (
           <div key={product.id}>
             <Product products={product} />

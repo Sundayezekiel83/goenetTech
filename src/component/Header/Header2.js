@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { AiOutlineMenu, AiOutlineShoppingCart } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
-import { categorySliceAction } from "../../store/slice/categorySlice";
-import { setSidebarOn } from "../../store/slice/sidebarSlice";
+import { Link } from "react-router-dom";
 
 const Header2 = () => {
   const { SidebarOn } = useSelector((state) => state.sidebar);
@@ -11,15 +10,14 @@ const Header2 = () => {
 
   return (
     <>
-      <section className="bg-white  shadow-md h-20">
-        <div className="flex space-x-10 mt-5 mx-auto justify-center">
-          <div className="text-[1.6rem] text-appcolor-500 flex items-center gap-4">
-            <AiOutlineMenu
-              className="invisible"
-              onClick={() => dispatch(setSidebarOn())}
-            />{" "}
-            GeoNet
-          </div>
+      <section className="bg-white  shadow-md h-20 items-center">
+        <div className="flex space-x-10 mt-5 mx-auto items-center justify-center">
+          <Link to="/">
+            <div className="text-[1.6rem] text-appcolor-500 flex items-center">
+              {" "}
+              <AiOutlineMenu className="invisible" /> GeoNet
+            </div>
+          </Link>
 
           <form>
             <div className="flex mt-2">
