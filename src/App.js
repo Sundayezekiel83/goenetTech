@@ -8,6 +8,7 @@ import SideBar from "./component/SideBar/SideBar";
 import HomePage from "./Pages/HomePage";
 import HomeProduct from "./Pages/HomeProduct";
 import SingleProduct from "./Pages/SingleProduct";
+import CartPage from "./Pages/CartPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomeProduct />} />
         <Route path="/products/detail" element={<SingleProduct />} />
+        <Route path="/product/cart" element={<CartPage />} />
       </Routes>
     </>
   );

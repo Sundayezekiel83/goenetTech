@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { AiOutlineMenu, AiOutlineShoppingCart } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header2 = () => {
   const { SidebarOn } = useSelector((state) => state.sidebar);
-
+  const { Cart: carts } = useSelector((state) => state.Cart);
   const dispatch = useDispatch();
+
+  const Navigate = useNavigate();
 
   return (
     <>
@@ -46,13 +48,14 @@ const Header2 = () => {
               </div>
             </div>
           </form>
-          <div className="flex">
+
+          <div className="flex" onClick={() => Navigate("/product/cart")}>
             <var>
               <AiOutlineShoppingCart size={40} />
             </var>
             <sup>
               <span className="bg-appcolor-600  text-white rounded-full text-sm p-1">
-                2
+                {carts.length}
               </span>
             </sup>
           </div>

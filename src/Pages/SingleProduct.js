@@ -1,15 +1,20 @@
 import React, { useState } from "react";
 import "./singleProduct.scss";
-import laptop from "../component/asset/laptop.jpg";
 import { useLocation } from "react-router-dom";
+import { addCart } from "../store/slice/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const SingleProduct = () => {
   const { state } = useLocation();
 
+  const { Cart } = useSelector((state) => state.Cart);
+
   const product = state.products;
+  const dispatch = useDispatch();
 
   const [imgsrc, setImgSrc] = useState(product.images[0]);
 
+  console.log(Cart);
   return (
     <>
       <main className="py-5 bg-whitesmoke">
@@ -158,9 +163,9 @@ const SingleProduct = () => {
                       <i className="fas fa-shopping-cart"></i>
                       <span
                         className="btn-text mx-2"
-                        // onClick={() => {
-                        //   addToCartHandler(product);
-                        // }}
+                        onClick={() =>
+                          dispatch(addCart({ ...product, quantity: 1 }))
+                        }
                       >
                         add to cart
                       </span>
